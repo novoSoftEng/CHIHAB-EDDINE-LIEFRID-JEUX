@@ -534,4 +534,5 @@ CMakeFiles/MyGame.dir/Classes/MainMenu.cpp.o: \
  /home/nameless/Documents/study/S5/cpp/projects/MyGame/cocos2d/cocos/base/CCEventDispatcher.h \
  /home/nameless/Documents/study/S5/cpp/projects/MyGame/cocos2d/cocos/3d/CCVertexAttribBinding.h \
  /home/nameless/Documents/study/S5/cpp/projects/MyGame/Classes/Scene1.h \
- /home/nameless/Documents/study/S5/cpp/projects/MyGame/Classes/Scene2.h
+ /home/nameless/Documents/study/S5/cpp/projects/MyGame/Classes/Scene2.h \
+ /home/nameless/Documents/study/S5/cpp/projects/MyGame/Classes/Scene3.h

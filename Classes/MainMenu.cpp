@@ -1,7 +1,7 @@
 #include "MainMenu.h"
 #include "Scene1.h"
 #include "Scene2.h"
-//#include "Scene3.h"
+#include "Scene3.h"
 
 
 USING_NS_CC;
@@ -35,15 +35,15 @@ bool MainMenu::init()
     auto level1 = MenuItemImage::create("res/level1.png",
         "res/level1.png",CC_CALLBACK_1(MainMenu::GoToScene1, this));
 
-    auto level2 = MenuItemImage::create("res/level2.png",
-        "res/level2.png",CC_CALLBACK_1(MainMenu::GoToScene2, this));
+    auto level2 = MenuItemImage::create("res/level2.jpeg",
+        "res/level2.jpeg",CC_CALLBACK_1(MainMenu::GoToScene2, this));
 
     auto level3 = MenuItemImage::create("res/level3.png",
       "res/level3.png",
        CC_CALLBACK_1(MainMenu::GoToScene3, this));
 
     level1->setScale(0.5,0.5);
-    level2->setScale(0.5,0.5);
+    level2->setScale(0.6,0.6);
    level3->setScale(0.5,0.5);
     auto menu = Menu::create(level1,level2,level3,nullptr);
     menu->alignItemsVerticallyWithPadding(visibleSize.height / 18);
@@ -68,13 +68,9 @@ bool MainMenu::init()
 void MainMenu::GoToScene1(cocos2d::Ref* pSender)
 {
     auto scene = Scene1::createScene();
-    //Close the cocos2d-x game scene and quit the application
+
     Director::getInstance()->replaceScene(TransitionFade::create(1.0,scene));
 
-    /*To navigate back to native iOS screen(if present) without quitting the application  ,do not use Director::getInstance()->end() as given above,instead trigger a custom event created in RootViewController.mm as below*/
-
-    //EventCustom customEndEvent("game_scene_close_event");
-    //_eventDispatcher->dispatchEvent(&customEndEvent);
 
 
 }
@@ -93,9 +89,9 @@ void MainMenu::GoToScene2(cocos2d::Ref* pSender)
 }
 void MainMenu::GoToScene3(cocos2d::Ref* pSender)
 {
-  //  auto scene = Scene3::createScene();
+    auto scene = Scene3::createScene();
     //Close the cocos2d-x game scene and quit the application
-   // Director::getInstance()->replaceScene(TransitionFade::create(1.0,scene));
+    Director::getInstance()->replaceScene(TransitionFade::create(1.0,scene));
 
     /*To navigate back to native iOS screen(if present) without quitting the application  ,do not use Director::getInstance()->end() as given above,instead trigger a custom event created in RootViewController.mm as below*/
 

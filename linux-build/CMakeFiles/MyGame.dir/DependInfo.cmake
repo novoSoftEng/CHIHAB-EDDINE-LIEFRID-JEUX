@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/nameless/Documents/study/S5/cpp/projects/MyGame/Classes/Scene1.cpp" "CMakeFiles/MyGame.dir/Classes/Scene1.cpp.o" "gcc" "CMakeFiles/MyGame.dir/Classes/Scene1.cpp.o.d"
   "/home/nameless/Documents/study/S5/cpp/projects/MyGame/Classes/Scene2.cpp" "CMakeFiles/MyGame.dir/Classes/Scene2.cpp.o" "gcc" "CMakeFiles/MyGame.dir/Classes/Scene2.cpp.o.d"
   "/home/nameless/Documents/study/S5/cpp/projects/MyGame/Classes/Scene3.cpp" "CMakeFiles/MyGame.dir/Classes/Scene3.cpp.o" "gcc" "CMakeFiles/MyGame.dir/Classes/Scene3.cpp.o.d"
+  "/home/nameless/Documents/study/S5/cpp/projects/MyGame/Classes/WinScene.cpp" "CMakeFiles/MyGame.dir/Classes/WinScene.cpp.o" "gcc" "CMakeFiles/MyGame.dir/Classes/WinScene.cpp.o.d"
   "/home/nameless/Documents/study/S5/cpp/projects/MyGame/Classes/keyboard.cpp" "CMakeFiles/MyGame.dir/Classes/keyboard.cpp.o" "gcc" "CMakeFiles/MyGame.dir/Classes/keyboard.cpp.o.d"
   "/home/nameless/Documents/study/S5/cpp/projects/MyGame/proj.linux/main.cpp" "CMakeFiles/MyGame.dir/proj.linux/main.cpp.o" "gcc" "CMakeFiles/MyGame.dir/proj.linux/main.cpp.o.d"
   )

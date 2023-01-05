@@ -1,6 +1,7 @@
 #include "Scene3.h"
 #include "MainMenu.h"
 #include "keyboard.h"
+#include "WinScene.h"
 
 USING_NS_CC;
 
@@ -8,8 +9,7 @@ Scene *Scene3::createScene()
 {
     auto scene = Scene::createWithPhysics();
     auto layer = Scene3::create();
-      PhysicsWorld* world = scene->getPhysicsWorld();
-   world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+
     scene->addChild(layer);
     return scene;
 }
@@ -25,10 +25,11 @@ bool Scene3::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     // border
-    auto wall = DrawNode::create();
+    auto wall = Node::create();
+    
     auto wallBody = PhysicsBody::createEdgeBox(size, PhysicsMaterial(100, 1.0f, 0.5f), 2);
     wall->setPhysicsBody(wallBody);
-    wall->drawSolidRect(Vec2(480, 100), Vec2(580, 200), Color4F::GRAY);
+
     wall->setPosition(Vec2(size.width / 2 + origin.x, size.height / 2 + origin.y));
     this->addChild(wall);
     // player
@@ -56,7 +57,7 @@ bool Scene3::init()
         if (i == 3 || i == 6)
         {
             auto trap = Sprite::create("res/scene3/trap.png");
-            auto trapPhysics = PhysicsBody::createBox(trap->getContentSize(), PhysicsMaterial(1, 0.1f, 0.1f));
+            auto trapPhysics = PhysicsBody::createBox(trap->getContentSize()/2, PhysicsMaterial(1, 0.1f, 0.1f));
             trapPhysics->setDynamic(false);
             trapPhysics->setContactTestBitmask(1);
             trap->addComponent(trapPhysics);
@@ -68,7 +69,7 @@ bool Scene3::init()
         }
         else
         {
-            (listTile.at(i))->setScale(0.89, 0.5);
+            (listTile.at(i))->setScale(1, 0.5);
             auto tilePhysics = PhysicsBody::createBox((listTile.at(i))->getContentSize(), PhysicsMaterial(1, 0.1f, 0.1f));
             tilePhysics->setDynamic(false);
             (listTile.at(i))->setPhysicsBody(tilePhysics);
@@ -79,7 +80,7 @@ bool Scene3::init()
             if(i==8){
                    // earth spike
     auto spike = Sprite::create("res/scene3/earthSpike.png");
-    auto spikePhysics = PhysicsBody::createBox(spike->getContentSize(), PhysicsMaterial(1, 0.1f, 0.1f));
+    auto spikePhysics = PhysicsBody::createBox(spike->getContentSize()/2, PhysicsMaterial(1, 0.1f, 0.1f));
     spikePhysics->setDynamic(false);
     spikePhysics->setContactTestBitmask(1);
     spike->addComponent(spikePhysics);
@@ -93,8 +94,8 @@ bool Scene3::init()
 auto flag = Sprite::create("flag1.png");
     flag->setAnchorPoint(Vec2(0, 0));
     flag->setScale(0.5,0.5);
-    flag->setPosition(Vec2(size.width/1.2,size.height/4));
-    flag->setTag(20);
+    flag->setPosition(Vec2(size.width/1.1,size.height/10));
+    flag->setTag(10);
     auto physicsBody2 = PhysicsBody::createBox(flag->getContentSize());
     physicsBody2->setGravityEnable(false);
     physicsBody2->setContactTestBitmask(1);
@@ -117,11 +118,11 @@ auto flag = Sprite::create("flag1.png");
         if (nodeA->getTag() == 10 && nodeB->getTag() == 10)
         {
 
-            Director::getInstance()->replaceScene(MainMenu::createScene());
+            Director::getInstance()->replaceScene(TransitionFade::create(1.0,WinScene::createScene()));
         }
         else
         {
-            Director::getInstance()->replaceScene(Scene3::createScene());
+            Director::getInstance()->replaceScene(TransitionFade::create(1.0,MainMenu::createScene()));
         }
 
         //

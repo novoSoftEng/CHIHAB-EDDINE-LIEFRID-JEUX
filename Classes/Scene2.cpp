@@ -126,11 +126,11 @@ bool Scene2::init()
         if (nodeA->getTag() == 10 && nodeB->getTag() == 10)
         {
 
-            Director::getInstance()->replaceScene(MainMenu::createScene());
+            Director::getInstance()->replaceScene(TransitionFade::create(1.0,MainMenu::createScene()));
         }
         else
         {
-            Director::getInstance()->replaceScene(Scene3::createScene());
+            Director::getInstance()->replaceScene(TransitionFade::create(1.0,Scene3::createScene()));
         }
 
         //

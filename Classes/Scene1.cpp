@@ -9,8 +9,7 @@ Scene *Scene1::createScene()
     auto scene = Scene::createWithPhysics();
 auto layer = Scene1::create();
 scene->addChild(layer);
-PhysicsWorld* world = scene->getPhysicsWorld();
-world->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+
 return scene;
 
 }
@@ -51,7 +50,7 @@ this->addChild(wall);
 auto contactListener =EventListenerPhysicsContact::create();
 contactListener->onContactBegin = [](PhysicsContact& contact){
 
-Director::getInstance()->replaceScene(Scene2::createScene());
+Director::getInstance()->replaceScene(TransitionFade::create(1.0,Scene2::createScene()));
 auto shapeA = contact.getShapeA();
 auto bodyA = shapeA->getBody();
 auto shapeB = contact.getShapeB();
@@ -64,7 +63,7 @@ this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(contactListen
     auto sprite = Sprite::create("res/vikingPlayer/viking1.png");
     sprite->setAnchorPoint(Vec2(0.5, 0.5));
     sprite->setPosition(Vec2(size.width / 6, size.height / 6));
-    auto physicsBody = PhysicsBody::createCircle(sprite->getContentSize().width/2,PhysicsMaterial(100, 0,0));
+    auto physicsBody = PhysicsBody::createBox(sprite->getContentSize(),PhysicsMaterial(100, 0,0));
 physicsBody->setGravityEnable(false);
 physicsBody->setContactTestBitmask(1);
 sprite->setPhysicsBody(physicsBody);
@@ -74,7 +73,7 @@ sprite->setPhysicsBody(physicsBody);
     auto flag = Sprite::create("flag1.png");
     flag->setAnchorPoint(Vec2(0.5, 0.5));
     flag->setPosition(Vec2(size.width - size.width / 9, size.height / 6));
-    auto physicsBody2 = PhysicsBody::createCircle(flag->getContentSize().width/2);
+    auto physicsBody2 = PhysicsBody::createBox(flag->getContentSize());
     physicsBody2->setGravityEnable(false);
 physicsBody2->setContactTestBitmask(1);
 flag->setPhysicsBody(physicsBody2);

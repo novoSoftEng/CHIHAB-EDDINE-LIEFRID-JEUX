@@ -98,7 +98,7 @@ auto scene3 = Scene3::createScene();
 auto mainMenu = MainMenu::createScene();
 
     // run
-    director->runWithScene(scene2);
+    director->runWithScene(mainMenu);
 
     return true;
 }

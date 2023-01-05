@@ -442,6 +442,30 @@ Classes/Scene3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/Classes/Scene3.cpp.s
 .PHONY : Classes/Scene3.cpp.s
 
+Classes/WinScene.o: Classes/WinScene.cpp.o
+.PHONY : Classes/WinScene.o
+
+# target to build an object file
+Classes/WinScene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/Classes/WinScene.cpp.o
+.PHONY : Classes/WinScene.cpp.o
+
+Classes/WinScene.i: Classes/WinScene.cpp.i
+.PHONY : Classes/WinScene.i
+
+# target to preprocess a source file
+Classes/WinScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/Classes/WinScene.cpp.i
+.PHONY : Classes/WinScene.cpp.i
+
+Classes/WinScene.s: Classes/WinScene.cpp.s
+.PHONY : Classes/WinScene.s
+
+# target to generate assembly for a file
+Classes/WinScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyGame.dir/build.make CMakeFiles/MyGame.dir/Classes/WinScene.cpp.s
+.PHONY : Classes/WinScene.cpp.s
+
 Classes/keyboard.o: Classes/keyboard.cpp.o
 .PHONY : Classes/keyboard.o
 
@@ -530,6 +554,9 @@ help:
 	@echo "... Classes/Scene3.o"
 	@echo "... Classes/Scene3.i"
 	@echo "... Classes/Scene3.s"
+	@echo "... Classes/WinScene.o"
+	@echo "... Classes/WinScene.i"
+	@echo "... Classes/WinScene.s"
 	@echo "... Classes/keyboard.o"
 	@echo "... Classes/keyboard.i"
 	@echo "... Classes/keyboard.s"

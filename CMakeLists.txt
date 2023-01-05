@@ -63,6 +63,7 @@ list(APPEND GAME_SOURCE
      Classes/Scene2.cpp
      Classes/Scene3.cpp
      Classes/MainMenu.cpp
+     Classes/WinScene.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
@@ -72,6 +73,7 @@ list(APPEND GAME_HEADER
      Classes/Scene2.h
      Classes/Scene3.h
      Classes/MainMenu.h
+     Classes/WinScene.h
     )
 if(ANDROID)
     # change APP_NAME to the share library name for Android, it's value depend on AndroidManifest.xml

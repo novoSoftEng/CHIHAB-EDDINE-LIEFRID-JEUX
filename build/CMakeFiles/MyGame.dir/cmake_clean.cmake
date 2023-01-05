@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyGame.dir/Classes/Scene2.cpp.o.d"
   "CMakeFiles/MyGame.dir/Classes/Scene3.cpp.o"
   "CMakeFiles/MyGame.dir/Classes/Scene3.cpp.o.d"
+  "CMakeFiles/MyGame.dir/Classes/WinScene.cpp.o"
+  "CMakeFiles/MyGame.dir/Classes/WinScene.cpp.o.d"
   "CMakeFiles/MyGame.dir/Classes/keyboard.cpp.o"
   "CMakeFiles/MyGame.dir/Classes/keyboard.cpp.o.d"
   "CMakeFiles/MyGame.dir/proj.linux/main.cpp.o"
