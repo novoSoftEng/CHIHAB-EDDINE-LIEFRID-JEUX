@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+babf6da6ec6560294e0da2d596eccbf6 CMakeFiles/SYNC_RESOURCE-MyGame
